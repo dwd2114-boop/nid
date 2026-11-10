@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>상세견적서_한솔솔파크 306동 502호_261109</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root { --blue:#0b5bb5; --line:#a9c1dc; --sec:#e9f0f8; --head:#eef3fa; --ink:#222; }
+  * { box-sizing:border-box; }
+  html,body { margin:0; background:#fff; color:var(--ink); }
+  body { font-family:"Malgun Gothic","맑은 고딕","Noto Sans KR",sans-serif; font-size:9px; line-height:1.35;
+         -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+  .page { width:718px; margin:0 auto; }
+  header { display:flex; justify-content:space-between; align-items:flex-end; padding-bottom:8px; border-bottom:2px solid var(--blue); }
+  header img { height:34px; }
+  header .co { text-align:right; color:#555; font-size:9.5px; line-height:1.6; }
+  h1 { text-align:center; font-size:24px; letter-spacing:34px; margin:10px 0 8px; padding-left:34px; font-weight:700; }
+  .info { display:flex; justify-content:space-between; gap:20px; }
+  .info table { border-collapse:collapse; font-size:10px; }
+  .info td { border:1px solid var(--line); padding:2px 7px; white-space:nowrap; }
+  .info td.k { background:var(--head); font-weight:700; }
+  .info td.v { text-align:right; }
+  .total { display:flex; justify-content:space-between; align-items:center; background:var(--blue); color:#fff;
+           padding:6px 12px; margin:8px 0 6px; font-size:13px; font-weight:700; }
+  .total small { font-weight:400; font-size:11px; }
+  table.est { width:100%; border-collapse:collapse; table-layout:fixed; }
+  table.est th, table.est td { border:1px solid var(--line); padding:2px 4px; vertical-align:middle; }
+  table.est thead th { background:var(--head); font-weight:700; text-align:center; padding:3px 2px; }
+  thead { display:table-header-group; }
+  tr { break-inside:avoid; page-break-inside:avoid; }
+  td.c { text-align:center; } td.r { text-align:right; white-space:nowrap; } td.b, tr .b { font-weight:700; }
+  td.spec { font-size:8.6px; }
+  tr.sec td { background:var(--sec); color:var(--blue); font-weight:700; }
+  tr.tall td { height:58px; }
+  td.photo { padding:3px; text-align:center; }
+  .ph .pics { display:flex; flex-wrap:wrap; justify-content:center; gap:2px; }
+  .ph img { width:72px; height:42px; object-fit:contain; display:block; }
+  .ph.multi img { width:36px; height:22px; object-fit:cover; }
+  .ph .cap { font-size:7px; color:#444; line-height:1.2; margin-top:2px; }
+  tr.sum td { background:var(--sec); font-weight:700; }
+  tr.grand td { background:var(--blue); color:#fff; font-weight:700; }
+  ul.notes { margin:8px 0 0; padding-left:14px; font-size:9px; line-height:1.75; }
+  ul.notes li.hl { background:#fff8a6; font-weight:700; }
+</style>
+</head>
+<body>
+<div class="page">
+  <header>
+    <img src="img/logo.png" alt="NID">
+    <div class="co">니드 인테리어 | 대표 이대수<br>경기도 이천시 향교로82번길 15(창전동) | 458-14-03090 | 010-2028-2114</div>
+  </header>
+  <h1>상세견적서</h1>
+  <div class="info">
+    <table>
+      <tr><td class="k">현장</td><td style="min-width:150px">{{SITE}}</td></tr>
+      <tr><td class="k">견적일</td><td>{{DATE}}</td></tr>
+      <tr><td class="k">공사기간</td><td>{{PERIOD}}</td></tr>
+    </table>
+    <table>
+      <tr><td class="k">자재비</td><td class="v">{{MAT}} 원</td><td class="k">노무비</td><td class="v">{{LAB}} 원</td></tr>
+      <tr><td class="k">경비(식대·폐기물 등)</td><td class="v">{{EXP}} 원</td><td class="k">일반관리비·이윤</td><td class="v">{{MGMT}} 원</td></tr>
+      <tr><td class="k">부가세(10%)</td><td class="v">{{VAT}} 원</td><td class="k">부가세 포함</td><td class="v">{{INCL}} 원</td></tr>
+    </table>
+  </div>
+  <div class="total"><span>총 공급가액 (부가세 별도)</span><span>₩ {{SUPPLY}} <small>(부가세 포함 ₩ {{INCL}})</small></span></div>
+  <table class="est">
+    <colgroup>
+      <col style="width:22px"><col style="width:84px"><col style="width:150px"><col style="width:28px"><col style="width:30px">
+      <col style="width:52px"><col style="width:58px"><col style="width:58px"><col style="width:50px"><col style="width:58px"><col style="width:84px">
+    </colgroup>
+    <thead><tr><th>No</th><th>품명</th><th>브랜드·모델 / 규격</th><th>수량</th><th>단위</th><th>단가</th><th>자재비</th><th>노무비</th><th>경비</th><th>금액</th><th>사진</th></tr></thead>
+    <tbody>
+{{ROWS}}
+    </tbody>
+  </table>
+  <ul class="notes">
+{{NOTES}}
+  </ul>
+</div>
+</body>
+</html>
